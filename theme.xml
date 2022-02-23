@@ -1,0 +1,83 @@
+<!--
+theme name:     RetroBenny PS5
+version:        1.0
+author:         RetroBenny
+license:        creative commons CC BY-NC-SA - https://creativecommons.org/licenses/by-nc-sa/3.0/
+based on:       Magica Pixel by Jetup13 "GBZ 3.5" by Brad Miller, "Carbon" by Rookervik, "Spare" by Matt Kennedy, "SimpleBigArt" by Ewzzy, "GBZ-Mod" by tiduscrying
+-->
+
+<theme defaultView="grid">
+
+    <formatVersion>7</formatVersion>
+	
+    <variables>
+	  <fullscreenfixSubsetname>Emulationstation Screen Size</fullscreenfixSubsetname>
+      <backgroundColor>000000</backgroundColor>
+	  <mainColor>2d2d2d</mainColor>
+   </variables>
+   
+	<subset name="fullscreenfix" displayName="${fullscreenfixSubsetname}">
+        <include name="ES Header" displayName="${ES Header}">./_inc/xml/header.xml</include>
+        <include name="ES Fullscreen" displayName="${ES Fullscreen}">./_inc/xml/fullscreen.xml</include>
+		<include name="4:3" displayName="${4:3}">./_inc/xml/fullscreenv.xml</include>
+    </subset>
+	
+	<!--Hidden-->
+	<view name="system, basic, detailed, video, grid">
+	<text name="logoText, md_rating, md_releasedate, md_developer, md_publisher, md_genre, md_players, md_lastplayed, md_playcount, md_description, md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_players, md_lbl_lastplayed, md_lbl_playcount">
+		 <visible>false</visible>
+    </text>
+	</view>
+	
+	<view name="menu">
+<sound name="launch">
+		<path>./system_launch.wav</path>
+	</sound>
+	
+    <menuBackground name="menubg">
+	 <color>${mainColor}</color>
+    </menuBackground>
+	
+	<menuText name="menutext, menutitle">
+	  <fontPath>./_inc/fonts/font.ttf</fontPath>
+	  <fontSize>.038</fontSize>
+	  <color>ffffff</color>
+	</menuText>
+	
+	<menuText name="menufooter, menutextsmall">
+      <fontPath>./_inc/fonts/font.ttf</fontPath>
+      <fontSize>.029</fontSize>		 
+      <color>ffffff</color>
+    </menuText>
+	
+	<menuTextEdit name="menutextedit">
+      <inactive>./_inc/images/textinput_inactive.png</inactive>
+      <active>./_inc/images/textinput_active.png</active>
+    </menuTextEdit>
+    </view>
+
+                <textlist name="gamelist">
+			<scrollSound>./sounds/se_sys_cursor.wav</scrollSound>
+		</textlist>
+
+<view name="basic, detailed, video, grid">
+	<sound name="scroll">
+		<path>./game_scroll.wav</path>
+	</sound>
+	<sound name="launch">
+		<path>./game_launch.wav</path>
+	</sound>
+	<sound name="back">
+		<path>./game_back.wav</path>
+	</sound>
+</view>
+<view name="system">
+	<sound name="scroll">
+		<path>./system_scroll.wav</path>
+	</sound>
+	<sound name="launch">
+		<path>./system_launch.wav</path>
+	</sound>
+</view>
+	
+</theme>
